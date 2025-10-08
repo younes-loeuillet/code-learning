@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apprendre le CSS</title>
+  <style>
+   
+     *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #222;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 15px;
+      background: linear-gradient(90deg, #2563eb, #9333ea);
+      color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    main section {
+      margin-bottom: 40px;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    main section h2 {
+      font-size: 1.8rem;
+      color: #2563eb;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    main section p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    main section ul {
+      list-style-type: disc;
+      padding-left: 25px;
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    main section ul li {
+      margin-bottom: 12px;
+    }
+
+    main section ul.external-links li {
+      margin-bottom: 8px;
+    }
+
+    main section ul.external-links li a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    main section ul.external-links li a:hover {
+      color: #9333ea;
+      text-decoration: underline;
+    }
+
+    pre {
+      background-color: #1e293b;
+      color: #f8fafc;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+      box-shadow: inset 0 0 10px #0f172a;
+      margin-bottom: 15px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+    }
+
+    .illustration {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      margin-top: 15px;
+    }
+
+    .btn-retour {
+      display: inline-block;
+      background-color: #2563eb;
+      color: white;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.5);
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-retour:hover {
+      background-color: #9333ea;
+      box-shadow: 0 8px 20px rgba(147, 51, 234, 0.7);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px 10px;
+      color: #777;
+      font-size: 0.95rem;
+      border-top: 1px solid #ddd;
+    }
+
+    footer a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #9333ea;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Apprendre le CSS</h1>
+    <p>Le CSS est le langage qui permet de styliser et mettre en forme les pages web.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2> Qu'est-ce que le CSS ?</h2>
+      <p>CSS signifie <strong>Cascading Style Sheets</strong>. C’est ce qui permet de définir l’apparence visuelle d’une page web.</p>
+     
+    </section>
+
+    <section>
+      <h2> Structure de base d'un fichier CSS</h2>
+      <pre><code>/* Sélecteur */
+élément {
+  propriété: valeur;
+}</code></pre>
+      <p>Un fichier CSS contient des règles qui s’appliquent à des éléments HTML pour modifier leur style (couleur, taille, marges, etc.).</p>
+    </section>
+
+    <section>
+      <h2> Les propriétés CSS les plus utilisées</h2>
+      <ul>
+        <li><code>color</code> : définit la couleur du texte.</li>
+        <li><code>background-color</code> : définit la couleur de fond.</li>
+        <li><code>font-size</code> : contrôle la taille du texte.</li>
+        <li><code>margin</code> : espace autour des éléments.</li>
+        <li><code>padding</code> : espace à l'intérieur des éléments.</li>
+        <li><code>border</code> : ajoute une bordure autour d’un élément.</li>
+        <li><code>display</code> : contrôle comment un élément est affiché (block, inline, flex...).</li>
+        <li><code>flex</code> : utilisée pour gérer des mises en page flexibles.</li>
+        <li><code>position</code> : contrôle la position des éléments (relative, absolute, fixed).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2> Sites pour s'entraîner</h2>
+      <ul class="external-links">
+        <li><a href="https://codewars.com" target="_blank" rel="noopener noreferrer">Codewars</a></li>
+        <li><a href="https://codingame.com" target="_blank" rel="noopener noreferrer">CodinGame</a></li>
+        <li><a href="https://w3schools.com/css/" target="_blank" rel="noopener noreferrer">W3Schools - CSS</a></li>
+        <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2> À retenir</h2>
+      <ul>
+        <li>Le CSS permet de contrôler l’apparence des pages web.</li>
+        <li>Les règles CSS ciblent des éléments HTML pour leur appliquer des styles.</li>
+        <li>Le CSS est essentiel pour rendre les sites attrayants et lisibles.</li>
+      </ul>
+    </section>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="../index.html" class="btn-retour">← Retour à l'accueil</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 - Site éducatif pour le lycée | Support : <a href="#">Nous contacter</a></p>
+  </footer>
+</body>
+</html>

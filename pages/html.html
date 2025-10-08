@@ -4,10 +4,164 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Apprendre le HTML</title>
-  <link rel="stylesheet" href="style-html.css" />
+  <style>
+   
+     *{
+      box-sizing: content-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #222;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 15px;
+      background: linear-gradient(90deg, #2563eb, #9333ea);
+      color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    main section {
+      margin-bottom: 40px;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    main section h2 {
+      font-size: 1.8rem;
+      color: #2563eb;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    main section p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    main section ul {
+      list-style-type: disc;
+      padding-left: 25px;
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    main section ul li {
+      margin-bottom: 12px;
+    }
+
+    main section ul.external-links li {
+      margin-bottom: 8px;
+    }
+
+    main section ul.external-links li a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    main section ul.external-links li a:hover {
+      color: #9333ea;
+      text-decoration: underline;
+    }
+
+    pre {
+      background-color: #1e293b;
+      color: #f8fafc;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+      box-shadow: inset 0 0 10px #0f172a;
+      margin-bottom: 15px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+    }
+
+    .illustration {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      margin-top: 15px;
+    }
+
+    .btn-retour {
+      display: inline-block;
+      background-color: #2563eb;
+      color: white;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.5);
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-retour:hover {
+      background-color: #9333ea;
+      box-shadow: 0 8px 20px rgba(147, 51, 234, 0.7);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px 10px;
+      color: #777;
+      font-size: 0.95rem;
+      border-top: 1px solid #ddd;
+    }
+
+    footer a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #9333ea;
+    }
+  </style>
 </head>
 <body>
-
   <header>
     <h1>Apprendre le HTML</h1>
     <p>Le HTML est le langage de base pour créer des pages web. Il structure le contenu d'un site.</p>
@@ -17,63 +171,68 @@
     <section>
       <h2> Qu'est-ce que HTML ?</h2>
       <p>HTML signifie <strong>HyperText Markup Language</strong>. C’est le squelette de toute page web.</p>
-      <img src="../images/image1.jpg" alt="Exemple HTML" class="illustration" />
-    </section>
+     
+    
 
-    <section>
+    
       <h2> Structure de base d'une page</h2>
       <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Titre de la page&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    Contenu visible
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+&lt;head&gt;
+  &lt;title&gt;Titre de la page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  Contenu visible
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
     </section>
 
     <section>
       <h2> Les balises les plus utilisées</h2>
-     <ul>
-  <li>
-    <code>&lt;h1&gt; à &lt;h6&gt;</code> : Ces balises définissent les titres sur une page HTML. <strong>&lt;h1&gt;</strong> est le titre principal, le plus important, tandis que <strong>&lt;h6&gt;</strong> est un titre très secondaire. Ils structurent le contenu et aident aussi au référencement.
-  </li>
-  <li>
-    <code>&lt;p&gt;</code> : Sert à créer un paragraphe de texte. C’est la balise de base pour écrire des phrases et des blocs de texte dans une page.
-  </li>
-  <li>
-    <code>&lt;img&gt;</code> : Permet d’insérer une image dans la page. Elle utilise l’attribut <code>src</code> pour indiquer le chemin de l’image et <code>alt</code> pour une description textuelle si l’image ne s’affiche pas.
-  </li>
-  <li>
-    <code>&lt;a href=""&gt;</code> : Crée un lien cliquable. L’attribut <code>href</code> contient l’URL ou le chemin vers la page cible. En ajoutant <code>target="_blank"</code>, le lien s’ouvre dans un nouvel onglet.
-  </li>
-  <li>
-    <code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code> : Ce sont les balises pour créer des listes. <code>&lt;ul&gt;</code> crée une liste à puces, <code>&lt;ol&gt;</code> une liste numérotée, et <code>&lt;li&gt;</code> désigne chaque élément de la liste.
-  </li>
-  <li>
-    <code>&lt;div&gt;</code> : Un conteneur général qui sert à regrouper plusieurs éléments ensemble pour appliquer un style ou organiser la mise en page. Il n’affecte pas directement le contenu.
-  </li>
-  <li>
-    <code>&lt;span&gt;</code> : Balise en ligne utilisée pour cibler une partie spécifique de texte à l’intérieur d’un paragraphe ou d’une phrase. Utile pour appliquer un style ou un script sans casser la structure.
-  </li>
-  <li>
-    <code>&lt;br&gt;</code> : Insère un saut de ligne (retour à la ligne) sans créer un nouveau paragraphe. Utile pour des textes courts ou des adresses.
-  </li>
-  <li>
-    <code>&lt;strong&gt;</code> et <code>&lt;em&gt;</code> : <code>&lt;strong&gt;</code> met en avant un texte important (souvent affiché en gras), tandis que <code>&lt;em&gt;</code> met le texte en emphase (souvent en italique). Ce sont aussi des balises sémantiques, utiles pour l’accessibilité.
-  </li>
-</ul>
+      <ul>
+        <li>
+          <code>&lt;h1&gt; à &lt;h6&gt;</code> : Ces balises définissent les titres sur une page HTML.
+          <strong>&lt;h1&gt;</strong> est le titre principal, le plus important, tandis que
+          <strong>&lt;h6&gt;</strong> est un titre très secondaire. Ils structurent le contenu et aident aussi au référencement.
+        </li>
+        <li>
+          <code>&lt;p&gt;</code> : Sert à créer un paragraphe de texte. C’est la balise de base pour écrire des phrases et des blocs de texte dans une page.
+        </li>
+        <li>
+          <code>&lt;img&gt;</code> : Permet d’insérer une image dans la page. Elle utilise l’attribut <code>src</code> pour indiquer le chemin de l’image et <code>alt</code> pour une description textuelle si l’image ne s’affiche pas.
+        </li>
+        <li>
+          <code>&lt;a href=""&gt;</code> : Crée un lien cliquable. L’attribut <code>href</code> contient l’URL ou le chemin vers la page cible. En ajoutant <code>target="_blank"</code>, le lien s’ouvre dans un nouvel onglet.
+        </li>
+        <li>
+          <code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code> : Ce sont les balises pour créer des listes.
+          <code>&lt;ul&gt;</code> crée une liste à puces,
+          <code>&lt;ol&gt;</code> une liste numérotée, et
+          <code>&lt;li&gt;</code> désigne chaque élément de la liste.
+        </li>
+        <li>
+          <code>&lt;div&gt;</code> : Un conteneur général qui sert à regrouper plusieurs éléments ensemble pour appliquer un style ou organiser la mise en page. Il n’affecte pas directement le contenu.
+        </li>
+        <li>
+          <code>&lt;span&gt;</code> : Balise en ligne utilisée pour cibler une partie spécifique de texte à l’intérieur d’un paragraphe ou d’une phrase. Utile pour appliquer un style ou un script sans casser la structure.
+        </li>
+        <li>
+          <code>&lt;br&gt;</code> : Insère un saut de ligne (retour à la ligne) sans créer un nouveau paragraphe. Utile pour des textes courts ou des adresses.
+        </li>
+        <li>
+          <code>&lt;strong&gt;</code> et <code>&lt;em&gt;</code> : <code>&lt;strong&gt;</code> met en avant un texte important (souvent affiché en gras), tandis que <code>&lt;em&gt;</code> met le texte en emphase (souvent en italique). Ce sont aussi des balises sémantiques, utiles pour l’accessibilité.
+        </li>
+      </ul>
+      <img src="../images/image2.jpg" alt="Balises HTML" class="illustration" />
     </section>
 
     <section>
       <h2> Sites pour s'entraîner</h2>
       <ul class="external-links">
-        <li><a href="https://codewars.com" target="_blank">Codewars</a></li>
-        <li><a href="https://codingame.com" target="_blank">CodinGame</a></li>
-        <li><a href="https://w3schools.com/html/" target="_blank">W3Schools - HTML</a></li>
-        <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank">MDN Web Docs</a></li>
+        <li><a href="https://codewars.com" target="_blank" rel="noopener noreferrer">Codewars</a></li>
+        <li><a href="https://codingame.com" target="_blank" rel="noopener noreferrer">CodinGame</a></li>
+        <li><a href="https://w3schools.com/html/" target="_blank" rel="noopener noreferrer">W3Schools - HTML</a></li>
+        <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
       </ul>
     </section>
 
@@ -85,15 +244,14 @@
         <li>Le HTML est facile à apprendre mais fondamental</li>
       </ul>
     </section>
-    <div style="text-align: center; margin-top: 40px;">
-  <a href="../index.html" class="btn-retour">← Retour à l'accueil</a>
-</div>
 
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="../index.html" class="btn-retour">← Retour à l'accueil</a>
+    </div>
   </main>
 
   <footer>
     <p>© 2025 - Site éducatif pour le lycée | Support : <a href="#">Nous contacter</a></p>
   </footer>
-
 </body>
 </html>

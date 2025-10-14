@@ -24,15 +24,20 @@
       margin: 0 auto;
     }
 
-    header {
-      text-align: center;
-      padding: 30px 15px;
-      background: linear-gradient(90deg, #2563eb, #9333ea);
-      color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-      margin-bottom: 40px;
-    }
+   header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  padding: 30px 15px;
+  background: linear-gradient(90deg, #2563eb, #9333ea);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  margin-bottom: 40px;
+  text-align: left; /* plus centré au milieu */
+}
+
 
     header h1 {
       font-size: 2.8rem;
@@ -161,12 +166,33 @@
       text-decoration: underline;
       color: #9333ea;
     }
+    .btn-home {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c2cbd;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-home:hover {
+  transform: scale(1.2);
+  background-color: rgb(184, 31, 204);
+}
   </style>
 </head>
 <body>
   <header>
-  <h1>Apprendre les bases du HTML pour créer des sites web</h1>
+    <a href="../index.html" title="Accueil" class="btn-home">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+    </svg>
+  </a>
+<div class="header-text">
+    <h1>Apprendre les bases du HTML pour créer des sites web</h1>
     <p>Le HTML est le langage de base pour créer des pages web. Il structure le contenu d'un site.</p>
+  </div>
   </header>
 
   <main>

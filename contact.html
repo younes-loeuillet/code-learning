@@ -158,7 +158,7 @@
     const form = document.getElementById('contact-form');
 
     form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Empêche le comportement classique du submit
+      event.preventDefault(); 
 
       const formData = new FormData(form);
 
@@ -171,8 +171,8 @@
       })
       .then(response => {
         if (response.ok) {
-          // Redirection vers ta page merci
-          window.location.href = "https://younes-loeuillet.github.io/code-learning/merci.html";
+        
+          window.location.href = "https://younes-loeuillet.github.io/code-learning/pages/merci.html";
         } else {
           return response.json().then(data => {
             if (Object.hasOwn(data, 'errors')) {

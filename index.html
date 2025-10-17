@@ -11,56 +11,50 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
+    
     body {
-      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #001aff, #000000);
+      color: #ffffff;
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      color: #222222;
-      background: linear-gradient(-45deg, #07f8f4, #0561ff, #6d0ad6, #d300fd);
-      background-size: 400% 400%;
-      animation: gradientAnimation 10s ease infinite;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      align-items: center;
+      padding: 30px 20px;
+      text-align: center;
     }
-
-    @keyframes gradientAnimation {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-  
 
     header {
-      padding: 40px 20px;
-      text-align: center;
-      color: white;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-      background: rgba(0,0,0,0.3);
+      max-width: 900px;
+      margin-bottom: 40px;
     }
 
     header h1 {
-      font-size: 3em;
-      margin-bottom: 15px;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
       font-weight: 700;
-      letter-spacing: 1.5px;
     }
 
-    header p {
-      font-size: 1.3em;
+    header p.soustitre {
+      font-size: 1.3rem;
+      margin: 0 auto;
       max-width: 600px;
-      margin: auto;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+      font-weight: 500;
     }
 
     main {
-      background: white;
-      flex: 1;
-      max-width: 900px;
-      margin: 40px auto 0 auto;
-      border-radius: 15px;
+      background: rgba(255 255 255 / 0.1);
+      backdrop-filter: blur(8px);
+      border-radius: 25px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.7);
       padding: 40px 50px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-      color: #222;
+      max-width: 900px;
+      width: 100%;
+      color: #eeeeee;
+      text-align: left;
     }
 
     section {
@@ -69,114 +63,173 @@
 
     section h2 {
       font-weight: 700;
-      font-size: 2em;
-      color: #2575fc;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
+      font-size: 2.2rem;
+      color: #ffffff;
+      margin-bottom: 25px;
+      border-bottom: 3px solid #a3c1ff;
+      padding-bottom: 8px;
+      max-width: fit-content;
     }
 
-    p {
-      font-size: 1.1em;
+    section h2:hover {
+      color: #d1deff;
+      border-color: #d1deff;
+      cursor: default;
+    }
+
+    p, ul {
+      font-size: 1.15rem;
       line-height: 1.7;
-      color: #675a5a;
-      margin-bottom: 20px;
+      color: #dce6ffdd;
+      margin-bottom: 25px;
     }
 
     ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      color: #3f3a3a;
-      font-size: 1.1em;
+      padding-left: 25px;
+      color: #e6ebffcc;
     }
 
     ul li {
-      margin-bottom: 50px;
-      color: #000000;
+      margin-bottom: 20px;
+      font-weight: 600;
     }
 
-    .btn {
+    a.btn {
       display: inline-block;
-      background-color: #2575fc;
-      color: rgb(255, 255, 255);
+      background-color: #bdbdbd;
+      color: #000000;
+      padding: 12px 30px;
+      border-radius: 30px;
       text-decoration: none;
-      padding: 14px 30px;
-      border-radius: 50px;
       font-weight: 700;
-      font-size: 1.1em;
-      transition: background-color 0,6s ease;
-      box-shadow: 0 6px 15px rgba(37,117,252,0.4);
-      margin: 10px 10px 0 0;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 15px rgb(0 0 0 / 0.9);
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      margin-right: 15px;
+      user-select: none;
     }
 
-    .btn:hover {
+    a.btn:hover {
       background-color: #000000;
-      box-shadow: 0 8px 20px rgb(0, 74, 245);
-      color: #2768c9;
+      color: white;
+      box-shadow: 0 6px 20px rgba(255 255 255 / 0.9);
     }
 
     pre {
-      background: #000000;
+      background: #000000dd;
       color: #f8f8f2;
       padding: 20px 25px;
-      border-radius: 10px;
+      border-radius: 15px;
       overflow-x: auto;
-      font-size: 1.15em;
+      font-size: 1.15rem;
       font-family: 'Courier New', Courier, monospace;
-      box-shadow: inset 0 0 10px #00000099;
-      margin-top: 10px;
+      box-shadow: inset 0 0 10px #000000cc;
+      margin-top: 15px;
       user-select: all;
+      line-height: 1.5;
     }
 
     code {
       white-space: pre-wrap;
     }
+
     .images-section {
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      margin-top: 30px;
+      margin-top: 40px;
       flex-wrap: wrap;
     }
 
     .images-section img {
       width: 30%;
-      border-radius: 50px;
-      box-shadow: 0 15px 7px rgba(0,0,0,0.15);
-      transition: transform 1s ease;
-      cursor: pointer;;
+      border-radius: 25px;
+      box-shadow: 0 15px 20px rgba(0,0,0,0.5);
+      transition: transform 0.5s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      object-fit: cover;
+      height: 180px;
     }
 
     .images-section img:hover {
-      transform: scale(1.3);
-      box-shadow: 0 12px 30px rgb(0, 38, 255);
+      transform: scale(1.15);
+      box-shadow: 0 18px 35px rgba(255 255 255 / 0.7);
     }
 
     footer {
-      background: #111;
-      color: #aaa;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #bbb;
       text-align: center;
-      padding: 20px 10px;
-      font-size: 0.9em;
-      margin-top: auto;
     }
 
     footer .footer-links {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     footer .footer-links a {
-      color: #aaa;
+      color: #bbb;
       margin: 0 15px;
       text-decoration: none;
-      transition: color 0.3s ease;
       font-weight: 600;
+      transition: color 0.3s ease;
     }
 
     footer .footer-links a:hover {
-      color: white;
+      color: #fff;
+      text-decoration: underline;
     }
-    .soustitre{
-      color: #ffffff;
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      main {
+        padding: 30px 25px;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p.soustitre {
+        font-size: 1.1rem;
+      }
+
+      section h2 {
+        font-size: 1.8rem;
+      }
+
+      p, ul li {
+        font-size: 1rem;
+      }
+
+      .images-section img {
+        width: 48%;
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      header p.soustitre {
+        font-size: 1rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+
+      .images-section {
+        gap: 15px;
+      }
+
+      .images-section img {
+        width: 100%;
+        height: 180px;
+      }
     }
   </style>
 </head>
@@ -192,12 +245,12 @@
     <section>
       <h2>Pourquoi apprendre à coder ?</h2>
       <p>Apprendre à coder, c’est comprendre comment fonctionnent les technologies autour de nous, et acquérir un super pouvoir pour créer des sites, applications, jeux, et bien plus encore. Que tu sois débutant ou déjà curieux, ce site te guide pas à pas.</p>
-      <ul><STRong>
+      <ul><strong>
         <li>Développer ta pensée logique</li>
         <li>Créer tes propres projets</li>
         <li>Trouver des opportunités professionnelles</li>
         <li>Comprendre le web et les technologies modernes</li>
-      </ul></STRong>
+      </strong></ul>
     </section>
 
     <section>
@@ -226,13 +279,13 @@
 
   <footer>
     <div class="footer-links">
-      <a href="mailto:younesloeuillet11@gmail.com">Support</a>
+      <a href="#">Support</a>
       <a href="#">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href='pages/contactpgs.html'>Contact</a>
       <a href="#">Mentions légales</a>
     </div>
     &copy; 2025 Apprendre le Code - Tous droits réservés
-  </footer><code>&lt;h1&gt; à &lt;h6&gt;</code>
+  </footer>
 
 </body>
 </html>

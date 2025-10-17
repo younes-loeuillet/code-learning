@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Reset simple */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #001aff, #000000);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.1);
+      max-width: 520px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .intro {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #ddd;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      position: relative;
+      width: 100%;
+    }
+
+    .form-group i {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      color: #999;
+      pointer-events: none;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px 14px 14px 45px;
+      border-radius: 10px;
+      border: 1.5px solid #ccc;
+      font-size: 16px;
+      background-color: #f8f8f8;
+      color: #000;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+      resize: vertical;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #0077b5;
+      background-color: #fff;
+    }
+
+    button {
+      background-color: rgb(189, 189, 189);
+      color: #000;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgb(0, 0, 0);
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      align-self: center; /* centre le bouton */
+      width: 150px;
+    }
+
+    button:hover {
+      background-color: #000;
+      color: #fff;
+      box-shadow: 0 6px 20px rgb(255, 255, 255);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      font-size: 22px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #222;
+      color: white;
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 15px currentColor;
+    }
+
+    .social-links a.instagram:hover {
+      background-color: #e1306c;
+    }
+
+    .social-links a.linkedin:hover {
+      background-color: #0077b5;
+    }
+
+    .social-links a.discord:hover {
+      background-color: #5865f2;
+    }
+
+    .social-links a.telegram:hover {
+      background-color: #0088cc;
+    }
+
+    .social-links a.mail:hover {
+      background-color: #ffa500;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .intro {
+        font-size: 1rem;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Contactez-moi</h1>
+    <p class="intro">Une question, une idée ou un projet à partager ? Je serais ravi d’en discuter avec vous !</p>
+
+    <form id="contact-form" action="https://formspree.io/f/xvgwlraq" method="POST">
+      <input type="hidden" name="_subject" value="New submission!" />
+
+      <div class="form-group">
+        <i class="fas fa-user"></i>
+        <input type="text" name="name" placeholder="Votre nom" required />
+      </div>
+
+      <div class="form-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" name="email" placeholder="Votre email" required />
+      </div>
+
+      <div class="form-group">
+        <i class="fas fa-comment"></i>
+        <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+      </div>
+
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <div class="social-links">
+      <a href="https://instagram.com/yax_deve" class="instagram" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://linkedin.com/in/younes-loeuillet" class="linkedin" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://discordapp.com/users/" class="discord" target="_blank" aria-label="Discord">
+        <i class="fab fa-discord"></i>
+      </a>
+      <a href="https://t.me/" class="telegram" target="_blank" aria-label="Telegram">
+        <i class="fab fa-telegram-plane"></i>
+      </a>
+      <a href="mailto:yaxdeve@gmail.com" class="mail" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = "merci.html";
+        } else {
+          return response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              alert(data["errors"].map(error => error.message).join(", "));
+            } else {
+              alert("Oops! Une erreur est survenue, merci de réessayer.");
+            }
+          });
+        }
+      })
+      .catch(error => {
+        alert("Oops! Une erreur réseau est survenue.");
+        console.error(error);
+      });
+    });
+  </script>
+
+</body>
+</html>
